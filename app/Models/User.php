@@ -57,13 +57,13 @@ class User extends Authenticatable
         ];
     }
 
-    function role(): Attribute
-    {
-        return Attribute::make(
-            set: fn($val) => implode(',', $val),
-            get: fn($val) => explode(',', $val)
-        );
-    }
+    // function role(): Attribute
+    // {
+    //     return Attribute::make(
+    //         set: fn($val) => implode(',', $val),
+    //         get: fn($val) => explode(',', $val)
+    //     );
+    // }
 
     public function enrollments(): HasMany
     {
